@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: counter
-        image: "amine250/counter:latest"
+        image: "amine250/counter-app:latest"
         volumeMounts:
         - name: counter
           mountPath: /app/
