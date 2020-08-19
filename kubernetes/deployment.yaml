@@ -23,7 +23,7 @@ spec:
       volumes:
       - name: counter-script
         configMap:
-          defaultMode: 420
+          defaultMode: 0777
           name: counter-cm
       - name: counter
         persistentVolumeClaim:
