@@ -19,7 +19,7 @@ spec:
         - name: counter
           mountPath: /app/
         - name: counter-script
-          mountPath: /
+          mountPath: /app/script/
       volumes:
       - name: counter-script
         configMap:
