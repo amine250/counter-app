@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: counter
-        image: "amine250/counter:1.0"
+        image: "amine250/counter:latest"
         volumeMounts:
         - name: counter
           mountPath: /app/
@@ -35,8 +35,7 @@ metadata:
   name: counter
 spec:
   accessModes:
-  - ReadWriteMany
+  - ReadWriteOnce
   resources:
     requests:
       storage: 50Mi
-  storageClassName: default
