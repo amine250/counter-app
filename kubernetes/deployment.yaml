@@ -14,11 +14,17 @@ spec:
     spec:
       containers:
       - name: counter
-        image: "kahootali/counter:1.0"
+        image: "amine250/counter:1.0"
         volumeMounts:
         - name: counter
           mountPath: /app/
+        - name: counter-script
+          mountPath: /
       volumes:
+      - name: counter-script
+        configMap:
+          defaultMode: 420
+          name: counter-cm
       - name: counter
         persistentVolumeClaim:
           claimName: counter
@@ -33,4 +39,4 @@ spec:
   resources:
     requests:
       storage: 50Mi
-  storageClassName: efs
+  storageClassName: default
